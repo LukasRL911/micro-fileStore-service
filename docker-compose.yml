@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    restart: unless-stopped
+    environment:
+      - 'POSTGRES_DB=File_Store_db'
+      - 'POSTGRES_PASSWORD=Auronplay.29'
+      - 'POSTGRES_USER=vivecerca'
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/data/postgres
+volumes:
+  pgdata:
